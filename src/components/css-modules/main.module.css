@@ -1,0 +1,11 @@
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.input {
+  width: 100%;
+}
+h2 {
+  text-align: center;
+}
