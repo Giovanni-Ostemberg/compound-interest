@@ -1,7 +1,12 @@
 import React from "react";
+import M from "materialize-css";
 
 export default function InterestRate({ interestRate, interestChange }) {
   const handleChange = (event) => {
+    if (event.target.value > 12 || event.target.value < -12) {
+      M.toast({ html: "Limite Alcançado", classes: "rounded" });
+      return interestChange(event.target.value > 12 ? 12 : -12);
+    }
     interestChange(event.target.value);
   };
   return (
